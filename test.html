@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Snap Example</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            scroll-snap-type: y mandatory; /* Включаем вертикальную привязку */
+            overflow-y: scroll; /* Прокрутка по оси Y */
+            height: 100vh; /* Контейнер занимает всю высоту экрана */
+        }
+
+        .section-page {
+            scroll-snap-align: start; /* Привязываем секции к началу экрана */
+            height: 100vh; /* Каждая секция занимает всю высоту экрана */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        /* Дополнительные стили для секций */
+        #about {
+            background-color: lightblue;
+        }
+
+        #faq {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="about" class="about section-page">
+            <h1>About Section</h1>
+        </section>
+
+        <section id="faq" class="faq section-page">
+            <h1>FAQ Section</h1>
+        </section>
+    </div>
+</body>
+</html>
